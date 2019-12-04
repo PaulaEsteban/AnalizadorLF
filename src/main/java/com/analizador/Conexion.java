@@ -68,6 +68,18 @@ public class Conexion {
 	public void setContenido(String contenido) {
 		this.contenido = contenido;
 	}
+//	public static void main(String[] args) {
+//		Conexion c=null;
+//		try {
+//			c = new Conexion("hola","tagger");
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		System.out.println(c.activo);
+//
+//	}
+	
 }
 
 
