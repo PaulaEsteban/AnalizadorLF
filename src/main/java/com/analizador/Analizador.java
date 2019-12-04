@@ -225,25 +225,18 @@ public class Analizador {
 		return reflejas;
 	}
 	public String reglaPasiva(String texto) throws IOException, ParseException{
-		System.out.println("Llegamos a Regla Pasiva");
 		List<Integer> resultado=pasiva(texto);
-		System.out.println("Lista pasiva Creadas");
 		List<Integer> resultadoReflejaSujeto=reflejaSujeto(texto);
 		for(int i=0;i<resultadoReflejaSujeto.size();i++){
 			resultado.add(resultadoReflejaSujeto.get(i));
 		}
-		System.out.println("Lista r. sujeto Creadas");
 		List<Integer> resultadoReflejaSinSujeto=reflejaSinSujeto(texto);
 		for(int i=0;i<resultadoReflejaSinSujeto.size();i++){
 			resultado.add(resultadoReflejaSinSujeto.get(i));
 		}
-		System.out.println("Lista r. sin sujeto Creadas");
-		System.out.println("Listas Creadas");
-
 		if(resultado.contains(-1)){
 			return "Se ha producido un error en el proceso de validación";
 		}
-		System.out.println("Creamos regla");
 		Rule regla=new Rule();
 		regla.setId(20);
 		regla.setName("Regla - Forma Pasiva");
@@ -261,7 +254,6 @@ public class Analizador {
 		}
 		Gson gson = new Gson();
 		String jsonInString = gson.toJson(regla);
-		System.out.println("Pasado a JSON");
 		return jsonInString;
 	}
 	public String reglaSinSujeto(String texto) throws IOException, ParseException{
