@@ -238,7 +238,7 @@ public class Analizador {
 			return "Se ha producido un error en el proceso de validación";
 		}
 		Rule regla=new Rule();
-		regla.setId(20);
+		regla.setId(1);
 		regla.setName("Regla - Forma Pasiva");
 		regla.setDescription("No se permite el uso de la forma pasiva");
 		if(!resultado.isEmpty()){
@@ -308,7 +308,7 @@ public class Analizador {
 			}
 		}
 		Rule regla=new Rule();
-		regla.setId(21);
+		regla.setId(2);
 		regla.setName("Regla - Sujeto en la oraci\u00f3n");
 		regla.setDescription("Las oraciones deben tener sujeto");
 		if(!frasesSinSujeto.isEmpty()){
