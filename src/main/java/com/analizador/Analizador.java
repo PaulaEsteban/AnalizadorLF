@@ -13,7 +13,7 @@ import org.json.simple.parser.ParseException;
 
 import com.controller.Main;
 import com.google.gson.Gson;
-
+//Cambio
 public class Analizador {
 	private List<String> frases;
 	public Analizador(String texto){
