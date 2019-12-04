@@ -40,7 +40,7 @@ public class Main {
 	public ResponseEntity<String> comprobarReglaConcreta(HttpServletResponse response,@PathVariable("id_rule") Integer id,
 			@RequestParam(name="texto", required=true) String texto) {
 		Analizador analyzer=new Analizador(texto);
-		if(id==1){
+		if(id==20){
 			HttpHeaders headers = new HttpHeaders();
 			headers.add("Content-Type", "application/json;charset=UTF-8");
 			try {
@@ -51,7 +51,7 @@ public class Main {
 			} catch (IOException | ParseException e) {
 				return new ResponseEntity<>("Se ha producido un error en el proceso de validación", HttpStatus.INTERNAL_SERVER_ERROR);
 			}	
-		}else if(id==2){
+		}else if(id==21){
 			HttpHeaders headers = new HttpHeaders();
 			headers.add("Content-Type", "application/json;charset=UTF-8");
 			try {
