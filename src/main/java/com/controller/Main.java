@@ -41,14 +41,20 @@ public class Main {
 			@RequestParam(name="texto", required=true) String texto) {
 		Analizador analyzer=new Analizador(texto);
 		if(id==1){
+			System.out.println("Llegamos al if");
 			HttpHeaders headers = new HttpHeaders();
 			headers.add("Content-Type", "application/json;charset=UTF-8");
 			try {
 				if(analyzer.reglaPasiva(texto).equals("Se ha producido un error en el proceso de validación")){
+					System.out.println("Error validación 1");
+
 					return new ResponseEntity<>(analyzer.reglaPasiva(texto), headers, HttpStatus.INTERNAL_SERVER_ERROR);
 				}
+				System.out.println("Caso correcto");
+
 				return new ResponseEntity<>(analyzer.reglaPasiva(texto), headers, HttpStatus.OK);
 			} catch (IOException | ParseException e) {
+				System.out.println("Error validación 2");
 				return new ResponseEntity<>("Se ha producido un error en el proceso de validación", HttpStatus.INTERNAL_SERVER_ERROR);
 			}	
 		}else if(id==2){
