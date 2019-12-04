@@ -101,14 +101,14 @@ public class Main {
 	public ResponseEntity<String> reglaConcreta(HttpServletResponse response,@PathVariable("id_rule") Integer id) throws IOException {
 		String regla="";
 		Gson gson = new Gson();
-		if(id==1){
+		if(id==20){
 			Rule pasiva= new Rule();
 			pasiva.setId(1);
 			pasiva.setName("Regla - Forma Pasiva");
 			pasiva.setDescription("No se permite el uso de la forma pasiva");
 			pasiva.setReason(null);
 			regla = gson.toJson(pasiva);
-		}else if(id==2){
+		}else if(id==21){
 			Rule sinSujeto= new Rule();
 			sinSujeto.setId(2);
 			sinSujeto.setName("Regla - Sujeto en la oraci\u00f3n");
@@ -133,7 +133,7 @@ public class Main {
 		Gson gson = new Gson();
 		String lista ="[";
 		Rule pasiva= new Rule();
-		pasiva.setId(1);
+		pasiva.setId(20);
 		pasiva.setName("Regla - Forma Pasiva");
 		pasiva.setDescription("No se permite el uso de la forma pasiva");
 		pasiva.setReason(null);
@@ -142,7 +142,7 @@ public class Main {
 		
 
 		Rule sinSujeto= new Rule();
-		sinSujeto.setId(2);
+		sinSujeto.setId(21);
 		sinSujeto.setName("Regla - Sujeto en la oraci\u00f3n");
 		sinSujeto.setDescription("Las oraciones deben tener sujeto");
 		sinSujeto.setReason(null);
