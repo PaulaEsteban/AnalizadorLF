@@ -17,6 +17,23 @@ import com.google.gson.Gson;
 public class Analizador {
 	private List<String> frases;
 	public Analizador(String texto){
+		texto=texto.replace("%20", " ");
+		texto=texto.replace("001a","á");
+		texto=texto.replace("001e", "é");
+		texto=texto.replace("001i", "í");
+		texto=texto.replace("001o", "ó");
+		texto=texto.replace("001u", "ú");
+		texto=texto.replace("001A", "Á");
+		texto=texto.replace("001E","É");
+		texto=texto.replace("001I", "Í");
+		texto=texto.replace("001O","Ó");
+		texto=texto.replace("001U", "Ú");
+		texto=texto.replace("011u", "ü");
+		texto=texto.replace("011U", "Ü");
+		texto=texto.replace("001n", "ñ");
+		texto=texto.replace("001N", "Ñ");
+		texto=texto.replace("001!", "¡");
+		texto=texto.replace("001?", "¿");
 		frases= new ArrayList<String>();
 		String elemento="";
 		for (int i = 0; i <texto.length (); i++) {
